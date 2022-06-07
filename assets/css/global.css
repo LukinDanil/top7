@@ -1,0 +1,36 @@
+.btn-outer {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 17px;
+    padding: 17px;
+    text-align: center;
+    text-transform: uppercase;
+    background: transparent;
+    border: 2px solid #000000
+}
+
+.container {
+    width: 100vw;
+    margin-left: 15.7vw;
+    padding-right: 15px;
+}
+
+.section__title {
+    font-size: 45px;
+    font-weight: 900;
+    line-height: 70px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    display: block;
+}
+
+.section__title span {
+    color: #FF0000;
+}
+
+.section__desc {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    text-transform: uppercase;
+}
