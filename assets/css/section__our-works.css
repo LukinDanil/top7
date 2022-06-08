@@ -1,0 +1,124 @@
+.section__our-works {
+    display: flex;
+    align-items: center;
+    background-image: url(../img/phones-mocape.png), url(../img/radial-gradient.svg);
+    background-repeat: no-repeat;
+    background-position: bottom right, bottom center;
+    background-size: auto, cover;
+}
+
+.section__our-works .section__title {
+    max-width: 1090px;
+    margin-bottom: 50px;
+}
+
+.section__our-works .container {
+    padding-top: 50px;
+    position: relative;
+    z-index: 1;
+}
+
+.section__our-works .section__desc {
+    margin-bottom: 50px;
+    display: block;
+}
+
+.section__our-works .slider__inner {
+    max-width: 650px;
+}
+
+.section__our-works .slide {
+    padding: 30px 25px;
+    background: #fff;
+    position: relative;
+    padding-right: 140px;
+    overflow: hidden;
+}
+
+.section__our-works .slide__title {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    color: #000;
+    display: block;
+    margin-bottom: 30px;
+}
+
+.section__our-works .slide__desc {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px;
+    color: #000;
+    margin-bottom: 40px;
+    display: block;
+}
+
+.section__our-works .slide__image {
+    margin-bottom: 30px;
+}
+
+.section__our-works .slide__more {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #000;
+    display: inline-block;
+    margin-left: 60px;
+}
+
+.section__our-works .slide__number {
+    font-family: Morganite;
+    font-size: 600px;
+    font-weight: 900;
+    color: #ff0000;
+    position: absolute;
+    right: -1px;
+    bottom: -1px;
+    line-height: 300px;
+    letter-spacing: -8px;
+}
+
+.section__our-works .slider__wrap {
+    position: relative;
+}
+
+.section__our-works .slider__nav {
+    position: absolute;
+    top: 150px;
+    right: 15px;
+    flex-wrap: wrap;
+    font-weight: 900;
+}
+
+.section__our-works .slider__number {
+    margin-left: auto;
+    font-size: 60px;
+}
+
+.section__our-works .slider__count {
+    font-size: 40px;
+    font-weight: 900;
+}
+
+.section__our-works .slider__count::before {
+    bottom: -2px;
+}
+
+.section__our-works .slider__arrows {
+    flex: 0 0 100%;
+    align-items: flex-end;
+}
+
+.section__our-works .section__bg-title {
+    z-index: 0;
+    font-family: Morganite;
+    font-size: 345px;
+    font-weight: 900;
+    line-height: 345px;
+    letter-spacing: 0.1em;
+    max-width: 600px;
+    left: 7px;
+    top: 95px;
+}
