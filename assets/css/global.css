@@ -71,7 +71,7 @@
     display: block;
 }
 
-.section__title span {
+.section__title span, .section__desc span {
     color: #FF0000;
 }
 
@@ -213,4 +213,30 @@
 
 .slider__prev {
     background-image: url(../img/arrow-left.png);
+}
+
+ul {
+    padding-left: 32px;
+}
+
+ul li {
+    list-style: none;
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+ul li::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    width: 3px;
+    height: 3px;
+    background-color: #000;
+    left: -20px;
+    border-radius: 50%;
+}
+
+.section__dark ul li::before {
+    background-color: #fff;
 }

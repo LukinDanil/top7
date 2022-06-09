@@ -1,0 +1,228 @@
+.section__application {
+    padding-top: 125px;
+    padding-bottom: 100px;
+    overflow-x: hidden;
+}
+
+.section__application .section__bg-title {
+    z-index: 0;
+    text-transform: uppercase;
+    color: #dedede;
+    top: 60px;
+    left: 15px;
+}
+
+.section__application-image {
+    position: absolute;
+    top: 70px;
+    right: -15px;
+    z-index: 2;
+}
+
+.section__application .section__title {
+    margin-bottom: 30px;
+}
+
+.section__application .section__desc {
+    display: block;
+    font-size: 15px;
+    margin-bottom: 40px;
+    max-width: 750px;
+}
+
+.application__form {
+    padding: 75px 100px 90px;
+    background: #fff;
+    box-shadow: 0 21px 36px rgba(0, 0, 0, 0.3);
+    max-width: 90%;
+    position: relative;
+    background-image: url(../img/form__image.png);
+    background-repeat: no-repeat;
+    background-position: 100% 0%;
+}
+
+.application__form::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #ff0000;
+    -webkit-box-shadow: 0 41px 77px rgba(197, 31, 31, 0.6);
+    box-shadow: 0 41px 77px rgba(197, 31, 31, 0.6);
+    width: 46px;
+    height: 46px;
+    transform: translate(50%, -50%);
+}
+
+.form__step {
+    position: relative;
+    margin-bottom: 100px;
+}
+
+.form__step:last-child {
+    margin-bottom: 0px;
+}
+
+.form__step-number {
+    font-family: 'Morganite';
+    position: absolute;
+    left: -56px;
+    top: -20px;
+    font-size: 150px;
+    color: #f5f4f4;
+    font-weight: 900;
+    line-height: initial;
+}
+
+.form__step-title {
+    font-size: 21px;
+    line-height: 30px;
+    font-weight: 800;
+    display: block;
+    margin-bottom: 40px;
+}
+
+.form__step-title span {
+    color: #ff0000;
+}
+
+.form__radio {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form__radio-item {
+    flex: 0 0 30%;
+}
+
+.form__radio-input {
+    display: none;
+}
+
+.form__radio-label {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    border: 3px solid #dbdbdb;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 13px;
+    transition: .3s;
+}
+
+.form__radio-input:checked+.form__radio-label {
+    border-color: #ff0000;
+    background-color: #ff0000;
+    color: #fff;
+}
+
+.form__step-range {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 30px;
+}
+
+.range__text {
+    font-weight: 700;
+}
+
+.range__text span {
+    color: #ff0000;
+    font-family: Morganite;
+    font-size: 35px;
+}
+
+.form__step-range input[type="range"] {
+    width: 100%;
+    background-color: #f1f1f1;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    -ms-progress-appearance: none;
+    margin: 0;
+}
+
+.form__step-range input[type="range"]::-webkit-slider-runnable-track {
+    height: 4px;
+    background-color: transparent;
+    margin-top: 0px;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    -ms-progress-appearance: none;
+}
+
+.form__step-range input[type='range']::-webkit-slider-thumb {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    -ms-progress-appearance: none;
+    background-color: #ff0000;
+    box-shadow: 0 4px 9px rgba(255, 41, 41, 0.33);
+    transform: translateY(-50%);
+    margin-top: 3px;
+    cursor: ew-resize;
+}
+
+.form__step-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-between;
+}
+
+label.form__text {
+    flex: 0 0 40%;
+    position: relative;
+}
+
+label.form__text::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #ff0000;
+    width: 34px;
+    height: 2px;
+}
+
+.form__text-label {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    width: 100%;
+    transition: .3s;
+}
+
+.form__text.focus .form__text-label,
+.form__text input[type="text"]:focus+.form__text-label,
+.form__text textarea:focus+.form__text-label {
+    color: #8a8a8a;
+    transform: translateY(calc(-100% - 15px));
+    font-size: 12px;
+}
+
+.form__text input[type="text"],
+.form__text input[type="text"]:focus-visible,
+.form__text textarea,
+.form__text textarea:focus-visible {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    -ms-progress-appearance: none;
+    border: none;
+    padding: 15px 0;
+    width: 100%;
+    border-bottom: 1px solid #b7b7b7;
+    resize: none;
+    outline: none;
+    height: 100%;
+}
