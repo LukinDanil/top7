@@ -33,6 +33,7 @@
     position: relative;
     padding-right: 140px;
     overflow: hidden;
+    color: #000;
 }
 
 .section__our-works .slide__title {

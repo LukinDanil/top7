@@ -28,6 +28,8 @@
     font-size: 15px;
     margin-bottom: 40px;
     max-width: 750px;
+    font-weight: 400;
+    text-transform: unset;
 }
 
 .application__form {

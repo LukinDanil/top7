@@ -6,11 +6,13 @@
     text-align: center;
     text-transform: uppercase;
     background: transparent;
-    border: 2px solid #000000
+    border: 2px solid #000000;
+    text-decoration: none;
+    color: inherit;
 }
 
 .container {
-    width: 84.3vw;
+    width: calc(84.3vw - 15px);
     margin-left: 15.7vw;
     padding-right: 15px;
 }
@@ -50,7 +52,7 @@
     border-right: 1px solid #878787;
 }
 
-.section__light>* {
+.section__light > * {
     position: relative;
     z-index: 1;
 }
@@ -71,7 +73,8 @@
     display: block;
 }
 
-.section__title span, .section__desc span {
+.section__title span,
+.section__desc span {
     color: #FF0000;
 }
 
@@ -219,6 +222,10 @@ ul {
     padding-left: 32px;
 }
 
+ul[class] {
+    padding-left: 0;
+}
+
 ul li {
     list-style: none;
     position: relative;
@@ -235,6 +242,10 @@ ul li::before {
     background-color: #000;
     left: -20px;
     border-radius: 50%;
+}
+
+ul[class] li::before {
+    display: none;
 }
 
 .section__dark ul li::before {

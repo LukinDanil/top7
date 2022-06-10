@@ -37,6 +37,10 @@ ul.menu {
     column-gap: 50px;
 }
 
+li.menu__item::before {
+    display: none;
+}
+
 .menu__link {
     font-size: 20px;
     font-weight: 700;
