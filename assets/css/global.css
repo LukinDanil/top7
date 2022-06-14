@@ -18,8 +18,9 @@
 }
 
 .section {
-    min-height: 100vh;
+    height: 100vh;
     position: relative;
+    overflow-y: auto;
 }
 
 .section__light {
