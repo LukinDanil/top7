@@ -91,3 +91,30 @@
     width: calc(100% + 15px);
     max-width: unset;
 }
+
+
+
+@media screen and (max-width: 1000px) {
+    .exp__wrap {
+        flex-direction: column;
+    }
+
+    .exp__image {
+        width: 100%;
+    }
+
+    .exp__right {
+        transform: translateY(0);
+    }
+
+    .exp__right .section__desc {
+        padding-left: 0;
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .exp__item {
+        padding-left: 0px;
+    }
+}

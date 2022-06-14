@@ -30,7 +30,7 @@ dd {
 }
 
 /* Выставляем основные настройки по-умолчанию для body */
-body {
+html, body {
   overflow-x: hidden;
   min-height: 100vh;
   scroll-behavior: smooth;

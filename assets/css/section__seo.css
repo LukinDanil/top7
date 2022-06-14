@@ -39,10 +39,46 @@
     gap: 30px;
 }
 
+.section__seo .slide {
+    position: relative;
+    height: 83px;
+}
+
+.section__seo .slide > img {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+}
+
 .section__seo .section__title {
     max-width: 966px;
 }
 
 .section__seo .section__desc {
     max-width: 690px;
+}
+
+
+@media screen and (max-width: 768px) {
+    .section__seo .section__bg-title {
+        font-size: 100vw;
+        line-height: 100vw;
+    }
+
+    .section__seo {
+        background-image: none;
+    }
+
+    .section__seo .slider__wrap {
+        flex-direction: column;
+    }
+
+    .section__seo .slider__desc {
+        width: 100%;
+    }
+
+    .section__seo .slider__inner {
+        width: 100%;
+    }
 }

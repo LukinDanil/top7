@@ -28,6 +28,8 @@
 ul.our-team__department-list {
     display: flex;
     gap: 30px;
+    overflow-x: auto;
+    max-width: 1090px;
 }
 
 li.our-team__department-item {
@@ -37,6 +39,7 @@ li.our-team__department-item {
     line-height: 22px;
     background-color: #f1f1f1;
     transition: .3s;
+    min-width: max-content;
 }
 
 li.our-team__department-item.active {
@@ -138,4 +141,26 @@ ul.our-team__item-socials>li>a {
     line-height: 24px;
     text-decoration: none;
     border-bottom: 1px solid;
+}
+
+
+
+@media screen and (max-width:1000px) {
+    ul.our-team__list {
+        gap: 20px;
+    }
+
+    li.our-team__item {
+        flex: 0 0 calc(50% - 10px);
+    }
+}
+@media screen and (max-width:768px) {
+    .section__team .section__bg-title {
+        font-size: 50vw;
+        line-height: 50vw;
+    }
+
+    li.our-team__item {
+        flex: 0 0 100%;
+    }
 }

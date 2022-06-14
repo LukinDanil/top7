@@ -134,7 +134,7 @@ img.service__image {
 }
 
 /* Верхняя рамка */
-.border-tl::before { 
+.border-tl::before {
     content: "";
     position: absolute;
     top: 0;
@@ -150,7 +150,7 @@ li.service__item:hover .border-tl::before {
 }
 
 /* Левая рамка */
-.border-tl::after { 
+.border-tl::after {
     content: "";
     position: absolute;
     top: 0;
@@ -176,7 +176,7 @@ li.service__item:hover .border-tl::after {
 }
 
 /* Верхняя рамка */
-.border-br::before { 
+.border-br::before {
     content: "";
     position: absolute;
     bottom: 0;
@@ -192,7 +192,7 @@ li.service__item:hover .border-br::before {
 }
 
 /* Левая рамка */
-.border-br::after { 
+.border-br::after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -205,4 +205,27 @@ li.service__item:hover .border-br::before {
 
 li.service__item:hover .border-br::after {
     height: 100%;
+}
+
+
+
+@media screen and (max-width: 1000px) {
+    .service__wrap {
+        margin-left: 10vw;
+    }
+
+    img.service__image {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    li.service__item {
+        flex: 0 0 100%;
+    }
+
+    .service__wrap {
+        margin-left: 15px;
+        padding-right: 15px;
+    }
 }

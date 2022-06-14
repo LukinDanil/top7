@@ -228,3 +228,55 @@ label.form__text::before {
     outline: none;
     height: 100%;
 }
+
+
+
+@media screen and (max-width: 1000px) {
+    .section__application .section__bg-title {
+        font-size: 40vw;
+    }
+    
+    .application__form {
+        padding-left: 70px;
+        padding-right: 70px;
+    }
+    
+    .form__radio {
+        gap: 20px;
+        align-items: flex-start;
+    }
+
+    .form__radio-item {
+        flex: 0 0 calc(50% - 10px);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .application__form {
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-right: 0;
+        max-width: 100%;
+    }
+
+    .form__step-number {
+        display: none;
+    }
+
+    .form__radio-item {
+        flex: 0 0 100%;
+    }
+
+    .form__step {
+        margin-bottom: 50px;
+    }
+
+    label.form__text {
+        flex: 0 0 100%;
+    }
+
+    .section__application-image {
+        width: 180px;
+        top: 0%;
+    }
+}

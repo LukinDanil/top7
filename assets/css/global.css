@@ -251,3 +251,55 @@ ul[class] li::before {
 .section__dark ul li::before {
     background-color: #fff;
 }
+
+
+
+@media screen and (max-width: 1000px) {
+    .section__title {
+        font-size: 30px;
+        line-height: 35px;
+    }
+
+    .container {
+        margin-left: 10vw;
+        width: calc(90vw - 15px);
+    }
+
+    .section__nav {
+        left: 15px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .section__title {
+        font-size: 25px;
+        line-height: 30px;
+    }
+
+    .section__desc {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .section__nav {
+        display: none;
+    }
+
+    .container {
+        margin-left: 15px;
+        width: calc(100vw - 15px);
+    }
+
+    .section__line::before {
+        border-right: none;
+    }
+
+    .section__line::after {
+        border-right: none;
+    }
+
+    .section {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+}

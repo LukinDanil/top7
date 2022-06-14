@@ -84,3 +84,35 @@
     font-size: 20px;
     line-height: 24.38px;
 }
+
+
+
+@media screen and (max-width: 1000px) {
+    .reports__list {
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .reports__item {
+        flex: 0 0 calc(50% - 10px);
+    }
+
+    .reports__item:last-child {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .results__list {
+        flex-direction: column;
+    }
+
+    .results__percent {
+        text-align: center;
+    }
+
+    .reports__item {
+        flex: 0 0 100%;
+    }
+}

@@ -107,3 +107,54 @@ ul.footer__social-list {
 ul.footer__social-list>li {
     margin: 0;
 }
+
+
+@media screen and (max-width:768px) {
+    .section__footer {
+        flex-direction: column-reverse;
+        padding-bottom: 0 !important;
+        padding-top: 0 !important;
+    }
+
+    .section__footer .section__bg-title {
+        font-size: 50vw;
+        line-height: 50vw;
+        top: 50vh;
+    }
+
+    .footer__top {
+        height: auto;
+        padding: 20px 15px;
+    }
+
+    .footer__bottom {
+        height: auto;
+        padding: 20px 15px;
+    }
+
+    .footer-right {
+        min-height: 50vh;
+    }
+
+    .footer__title {
+        font-size: 30px;
+        line-height: 35px;
+    }
+
+    ul.footer__menu li {
+        margin: 0;
+    }
+
+    ul.footer__menu {
+        justify-content: center;
+    }
+
+    .footer__copyright {
+        text-align: center;
+    }
+
+    ul.footer__social-list {
+        width: 100%;
+        justify-content: center;
+    }
+}
