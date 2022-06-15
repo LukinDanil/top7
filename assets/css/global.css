@@ -110,7 +110,7 @@
     align-items: center;
     height: 100%;
     justify-content: flex-start;
-    z-index: 1;
+    z-index: 2;
 }
 
 .section__nav-arrows {
