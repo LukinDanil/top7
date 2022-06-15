@@ -1,87 +1,66 @@
 // $(document).scrollTop()
 
-// function sectionScrollDown() {
-//     let html = $('html, body');
-//     let scrollTo = $(document).scrollTop() + $(window).height();
-//     html
-//         .stop(true)
-//         .queue('fx',
-//             function () {
-//                 html
-//                     .animate({
-//                         scrollTop: scrollTo
-//                     }, scrollTo)
-//                     .dequeue('fx');
-//                 console.log('DOWN = ' + scrollTo);
-//             });
-// }
-
-function sectionScrollDown() {
-    let html = $('html, body');
-    let scrollTo = $(document).scrollTop() + $(window).height();
-    // let scrollTo = 1000;
-    html.animate({scrollTop: scrollTo});
-    console.log('DOWN = ' + scrollTo);
-}
-
-function sectionScrollUp() {
-    let html = $('html, body');
-    // let scrollTo = $(document).scrollTop() - $(window).height();
-    let scrollTo = 0;
-    html
-        .stop(true)
-        .queue('fx',
-            function () {
-                html
-                    .animate({
-                        scrollTop: scrollTo
-                    }, 300)
-                    .dequeue('fx');
-                console.log('UP = ' + scrollTo);
-            });
-}
+let scrolling = false;
+let duration = 0;
 
 function alignScrollSection() {
     $('.section').each(function () {
-        if ($(this).offset().top <= $(document).scrollTop() && ($(this).offset().top + $(this).height()) >= $(document).scrollTop()) {
-            let th = $(this);
-            $('html, body')
-                .stop(true)
-                .queue('fx',
-                    function () {
-                        $('html, body')
-                            .animate({
-                                scrollTop: th.offset().top
-                            }, 300)
-                            .dequeue('fx');
-                        console.log('DOWN = ' + th.offset().top);
-                    });
+        if ($(this).offset().top <= $(document).scrollTop() && ($(this).offset().top + ($(this).height() / 2)) >= $(document).scrollTop()) {
+            // if (!scrolling) {
+                // scrolling = true;
+                let scrollAlign = $(this).offset().top;
+                $('html, body').stop().animate({
+                    scrollTop: scrollAlign
+                }, duration);
+                console.log('ALIGN = ' + scrollAlign);
+                // setTimeout(function () { scrolling = false }, 500);
+            // }
         }
     });
 }
 
-function sectionScroll() {
-    alignScrollSection();
-    $('.section__nav-arrows .section__prev').click(sectionScrollUp);
-    $('.section__nav-arrows .section__next').click(sectionScrollDown);
+function sectionScrollDown() {
+    if (!scrolling) {
+        scrolling = true;
+        let html = $('html, body');
+        let scrollTo = $(document).scrollTop() + $(window).height();
+        html.stop().animate({ scrollTop: scrollTo }, duration);
+        console.log('DOWN = ' + scrollTo);
+        setTimeout(function () { scrolling = false; alignScrollSection() }, 500);
+    }
+}
 
-    $(document).bind('DOMMouseScroll mousewheel', function (e) {
-        $(this).stop(true).dequeue('fx');
+function sectionScrollUp() {
+    if (!scrolling) {
+        scrolling = true;
+        let html = $('html, body');
+        let scrollTo = $(document).scrollTop() - $(window).height();
+        html.stop().animate({ scrollTop: scrollTo }, duration);
+        console.log('UP = ' + scrollTo);
+        setTimeout(function () { scrolling = false; alignScrollSection() }, 500);
+    }
+}
+
+function sectionScroll() {
+    $(document).bind('DOMMouseScroll.customDOMMouseScroll mousewheel.customMousewheel', function (e) {
+        // e.preventDefault();
         if (e.originalEvent.wheelDelta / 120 > 0) {
-            sectionScrollUp();
+            sectionScrollUp(e);
         }
         else {
-            sectionScrollDown();
+            sectionScrollDown(e);
         }
+        // console.log('sectionScroll');
     });
 }
 
 (function ($) {
     $(document).ready(function () {
+        alignScrollSection();
+        $('.section__nav-arrows .section__prev').click(sectionScrollUp);
+        $('.section__nav-arrows .section__next').click(sectionScrollDown);
         sectionScroll();
     });
 
-    $(document).scroll(function () {
-        console.log($(document).scrollTop());
-    });
+    // $(document).scroll(function(){console.log($(window).scrollTop())});
 })(jQuery)

@@ -37,6 +37,12 @@ html, body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   font-family: 'Montserrat';
+  -ms-overflow-style: none;  /* IE и Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+html::-webkit-scrollbar, body::-webkit-scrollbar {
+  display: none;
 }
 
 /* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
