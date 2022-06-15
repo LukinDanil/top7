@@ -42,6 +42,11 @@
 .section__seo .slide {
     position: relative;
     height: 83px;
+    padding: 0 15px;
+}
+
+.section__seo .slider .slick-track {
+    margin: 0 -15px;
 }
 
 .section__seo .slide > img {

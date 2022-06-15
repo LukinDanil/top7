@@ -1,82 +1,69 @@
-// $(document).scrollTop()
-
-let scrolling = false;
-let duration = 0;
-let screen = 0;
-
-function sectionsInit() {
-    $('.section').each(function (index) {
-        $(this).attr('data-screen-index', index);
-    });
-
-    if (!scrolling) {
-        scrolling = true;
-        let html = $('html, body');
-        let scrollTo = $(`[data-screen-index='${screen}']`).offset().top;
-        clearActiveScreen();
-        $(`[data-screen-index='${screen}']`).addClass('active');
-        html.stop().animate({ scrollTop: scrollTo }, duration);
-        setTimeout(function () { scrolling = false; }, 500);
-    }
-};
-
-function clearActiveScreen() {
-    $(`[data-screen-index]`).each(function () {
-        $(this).removeAttr('active');
-    });
-}
-
-function sectionScrollDown() {
-    if (!scrolling) {
-        scrolling = true;
-        if ($('[data-screen-index]').length - 1 > screen) {screen++}
-        let html = $('html, body');
-        let scrollTo = $(`[data-screen-index='${screen}']`).offset().top;
-        clearActiveScreen();
-        $(`[data-screen-index='${screen}']`).addClass('active');
-        html.queue(function(){
-            $(this).animate({ scrollTop: scrollTo }, duration).dequeue();
-        });
-        console.log('screen = ' + screen);
-        setTimeout(function () { scrolling = false; }, 500);
-    }
-}
-
-function sectionScrollUp() {
-    if (!scrolling) {
-        scrolling = true;
-        if (screen > 0) {screen--}
-        let html = $('html, body');
-        let scrollTo = $(`[data-screen-index='${screen}']`).offset().top;
-        clearActiveScreen();
-        $(`[data-screen-index='${screen}']`).addClass('active');
-        html.queue(function(){
-            $(this).animate({ scrollTop: scrollTo }, duration).dequeue();
-        });
-        console.log('screen = ' + screen);
-        setTimeout(function () { scrolling = false; }, 500);
-    }
-}
-
-function sectionScroll() {
-    $(document).bind('DOMMouseScroll.customDOMMouseScroll mousewheel.customMousewheel', function (e) {
-        if (e.originalEvent.wheelDelta / 120 > 0) {
-            sectionScrollUp(e);
-        }
-        else {
-            sectionScrollDown(e);
-        }
-    });
+function pad(str, max) {
+    str = str.toString();
+    return str.length < max ? pad("0" + str, max) : str;
 }
 
 (function ($) {
-    $(document).ready(function () {
-        sectionsInit();
-        // alignScrollSection();
-        $('.section__nav-arrows .section__prev').click(sectionScrollUp);
-        $('.section__nav-arrows .section__next').click(sectionScrollDown);
-        sectionScroll();
+
+    $('.slider').on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
+        $(this).parents('.slider__wrap').find('.slider__count').text(pad(slick.slideCount, 2));
+        $(this).parents('.slider__wrap').find('.slider__number').text(pad((slick.currentSlide + 1), 2));
     });
 
-    // $(document).scroll(function(){console.log($(window).scrollTop())});
+    $('.section__seo .slider').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        autoplay: false,
+        arrows: false,
+        dots: false,
+        infinite: true,
+    });
+    $('.section__our-works .slider').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: false,
+        arrows: false,
+        dots: false,
+    });
+
+    $('.slider__next').click(function (e) {
+        e.preventDefault();
+        let index = $(this).parents('.slider__wrap').find('.slider').slick('slickCurrentSlide') + 1;
+        $(this).parents('.slider__wrap').find('.slider').slick('slickGoTo', index);
+    });
+
+    $('.slider__prev').click(function (e) {
+        e.preventDefault();
+        let index = $(this).parents('.slider__wrap').find('.slider').slick('slickCurrentSlide') - 1;
+        $(this).parents('.slider__wrap').find('.slider').slick('slickGoTo', index);
+    });
+
+    $('.tasks__item').click(function (e) {
+        e.preventDefault();
+        $('.tasks__item').each(function () {
+            $(this).removeClass('active');
+        });
+        $('.tasks__window-item').each(function () {
+            $(this).removeClass('active');
+        });
+
+        $(this).addClass('active');
+        $('.tasks__window-item').eq($(this).index()).addClass('active');
+    });
+
+    $('label.form__text input').on('change', function () {
+        if ($(this).val().length > 0) {
+            $(this).parent().addClass('focus');
+        } else {
+            $(this).parent().removeClass('focus');
+        }
+    });
+
+    $('.our-team__department-item').click(function (e) {
+        e.preventDefault();
+        $('.our-team__department-item').each(function(){
+            $(this).removeClass('active');
+        });
+        $(this).addClass('active');
+    });
 })(jQuery)
