@@ -1,0 +1,98 @@
+.section__calculation {
+    background-image: url(../img/section__calculation.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.section__calculation .section__title {
+    display: block;
+    max-width: 810px;
+    margin-bottom: 30px;
+}
+
+.section__calculation .section__desc {
+    display: block;
+    margin-bottom: 30px;
+    max-width: 810px;
+}
+
+.calculation__content ul {
+    padding-left: 37px;
+}
+
+.calculation__content ul li::before {
+    width: 20px;
+    height: 18px;
+    top: 5px;
+    transform: translate(-100%, 0%);
+    left: -17px;
+    border-radius: 0;
+    background-color: transparent;
+    background-image: url(../img/brilliant.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+form.calculation__form {
+    display: flex;
+    flex-direction: column;
+    max-width: 370px;
+    gap: 20px;
+}
+
+form.calculation__form .field__input {
+    display: block;
+    width: 100%;
+    padding: 20px;
+    outline: none;
+    background: transparent;
+    border: 2px solid #FFFFFF;
+    color: inherit;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 17px;
+    letter-spacing: 0.1em;
+}
+
+form.calculation__form .field__input::placeholder {
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 17px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+form.calculation__form .field__input::-moz-placeholder {
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 17px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+form.calculation__form .field__input::-webkit-input-placeholder {
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 17px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+form.calculation__form .field__label {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    display: block;
+    margin-bottom: 20px;
+}

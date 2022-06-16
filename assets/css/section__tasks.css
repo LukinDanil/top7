@@ -19,6 +19,7 @@
     margin-bottom: 55px;
     text-transform: none;
     display: block;
+    max-width: 770px;
 }
 
 .tasks__wrap {
@@ -110,6 +111,14 @@ li.tasks__item.active {
     overflow-y: auto;
     position: relative;
     z-index: 1;
+}
+
+.tasks__content p {
+    margin-bottom: 30px;
+}
+
+.tasks__content p:last-child {
+    margin-bottom: 0px;
 }
 
 

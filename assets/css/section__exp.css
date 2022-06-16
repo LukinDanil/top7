@@ -7,6 +7,8 @@
     max-width: 780px;
     display: block;
     margin-bottom: 30px;
+    position: relative;
+    z-index: 1;
 }
 
 .section__exp .section__desc {
@@ -54,7 +56,7 @@
     max-width: 355px;
 }
 
-.exp__item::before {
+.exp__item::after {
     content: "";
     position: absolute;
     top: 2px;
@@ -73,6 +75,10 @@
 
 .section__exp .section__desc b {
     text-transform: uppercase;
+}
+
+.section__exp .section__desc p {
+    margin-top: 30px;
 }
 
 .exp__right .section__desc {
@@ -110,11 +116,5 @@
     .exp__right .section__desc {
         padding-left: 0;
         max-width: 100%;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .exp__item {
-        padding-left: 0px;
     }
 }

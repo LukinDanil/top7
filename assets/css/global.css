@@ -11,6 +11,19 @@
     color: inherit;
 }
 
+.btn-fill {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 17px;
+    padding: 17px;
+    text-align: center;
+    text-transform: uppercase;
+    background: #ff0000;
+    border: 2px solid #ff0000;
+    text-decoration: none;
+    color: #fff;
+}
+
 .container {
     width: calc(84.3vw - 15px);
     margin-left: 15.7vw;
@@ -18,9 +31,8 @@
 }
 
 .section {
-    height: 100vh;
+    min-height: 100vh;
     position: relative;
-    overflow-y: auto;
 }
 
 .section__light {

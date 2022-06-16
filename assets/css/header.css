@@ -91,7 +91,7 @@ li.menu__item::before {
         background-color: #f1f1f1;
         box-shadow: 0 21px 36px rgba(0, 0, 0, 0.3);
         transition: .3s;
-        transform: translateX(100%)
+        transform: translateX(110%)
     }
 
     .header__inner.active {
@@ -104,9 +104,9 @@ li.menu__item::before {
         align-items: center;
         justify-content: center;
         border: none;
-        margin-left: auto;
+        margin-left: 15px;
         background: transparent;
-        margin-right: 7.37%;
+        margin-right: 15px;
     }
 
     ul.menu {

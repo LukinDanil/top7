@@ -2,7 +2,7 @@
 @import url(header.css);
 @import url(fonts.css);
 @import url(global.css);
-@import url(section__seo.css);
+@import url(section__cover.css);
 @import url(section__our-works.css);
 @import url(section__tasks.css);
 @import url(section__results.css);
@@ -11,5 +11,9 @@
 @import url(section__service.css);
 @import url(section__team.css);
 @import url(section__comfort.css);
+@import url(section__crm.css);
+@import url(section__control.css);
+@import url(section__evo.css);
 @import url(section__footer.css);
+@import url(section__calculation.css);
 @import url(slick.css);

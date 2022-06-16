@@ -1,0 +1,66 @@
+.section__evo {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.section__evo img.top-right__image {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.section__evo img.bottom-right__image {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 65vw;
+    max-width: 1020px;
+}
+
+.section__evo .section__title {
+    max-width: 780px;
+    margin-bottom: 50px;
+}
+
+.section__evo .section__desc {
+    max-width: 670px;
+    display: block;
+    margin-bottom: 50px;
+}
+
+.evo__content {
+    max-width: 34.3vw;
+}
+
+.evo__content>* {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.evo__content ul {
+    max-width: 380px;
+    padding-left: 37px;
+}
+
+.evo__content ul li::before {
+    width: 20px;
+    height: 18px;
+    top: 5px;
+    transform: translate(-100%, 0%);
+    left: -17px;
+    border-radius: 0;
+    background-color: transparent;
+    background-image: url(../img/brilliant.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media screen and (max-width: 768px) {
+    .evo__content {
+        max-width: 300px;
+    }
+
+    .section__evo img.bottom-right__image {
+        width: 100vw;
+    }
+}

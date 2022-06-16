@@ -10,13 +10,34 @@ function pad(str, max) {
         $(this).parents('.slider__wrap').find('.slider__number').text(pad((slick.currentSlide + 1), 2));
     });
 
-    $('.section__seo .slider').slick({
+    $('.section__cover .slider').slick({
         slidesToShow: 4,
         slidesToScroll: 1,
         autoplay: false,
         arrows: false,
         dots: false,
         infinite: true,
+        responsive: [
+            {
+                breakpoint: 1000,
+                settings: {
+                    slidesToShow: 3,
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 400,
+                settings: {
+                    slidesToShow: 1,
+                    centerMode: true,
+                }
+            }
+        ]
     });
     $('.section__our-works .slider').slick({
         slidesToShow: 1,
@@ -61,7 +82,7 @@ function pad(str, max) {
 
     $('.our-team__department-item').click(function (e) {
         e.preventDefault();
-        $('.our-team__department-item').each(function(){
+        $('.our-team__department-item').each(function () {
             $(this).removeClass('active');
         });
         $(this).addClass('active');
