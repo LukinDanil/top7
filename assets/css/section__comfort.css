@@ -1,6 +1,8 @@
 .section__comfort {
     display: flex;
     align-items: center;
+    padding-bottom: 5vh;
+    padding-top: 5vh;
 }
 
 .section__comfort .section__desc {

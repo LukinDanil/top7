@@ -129,9 +129,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: absolute;
-    bottom: 60px;
     gap: 20px;
+    margin-top: auto;
+    margin-bottom: 5vh;
 }
 
 .section__name {
